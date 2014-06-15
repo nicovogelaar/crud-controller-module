@@ -80,7 +80,7 @@ class AbstractCrudControllerFactory implements AbstractFactoryInterface
           $repository->setObjectManager($parentLocator->get('Doctrine\ORM\EntityManager'));
         }
 
-        return new $controllerClass($repository, $form, $paginator, $templates, $routes);
+        return new $controllerClass($repository, $templates, $routes, $form, $paginator);
     }
 
     /**

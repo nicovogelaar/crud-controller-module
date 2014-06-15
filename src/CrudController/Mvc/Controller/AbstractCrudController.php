@@ -47,7 +47,7 @@ abstract class AbstractCrudController extends AbstractActionController
     protected $templates;
 
     /**
-     * Routes
+     * Routes (list, add, edit, delete)
      * 
      * @var array
      */
@@ -64,13 +64,13 @@ abstract class AbstractCrudController extends AbstractActionController
      * Constructor
      * 
      * @param CrudRepositoryInterface $repository Crud repository
-     * @param mixed                   $form       Form
-     * @param mixed                   $paginator  Paginator
      * @param array                   $templates  Templates (list, add, edit)
      * @param array                   $routes     Routes (list, add, edit, delete)
+     * @param mixed                   $form       Form
+     * @param mixed                   $paginator  Paginator
      */
-    public function __construct(CrudRepositoryInterface $repository, $form,
-        $paginator, array $templates, array $routes
+    public function __construct(CrudRepositoryInterface $repository,
+        array $templates, array $routes, Form $form = null, $paginator = null
     ) {
         $this->repository = $repository;
         $this->form = $form;
@@ -140,7 +140,9 @@ abstract class AbstractCrudController extends AbstractActionController
     {
         $object = $this->getObject();
 
-        $this->form->bind($object);
+        if ($this->form) {
+            $this->form->bind($object);
+        }
 
         $request = $this->getRequest();
 
