@@ -35,10 +35,10 @@ return array(
                 'edit' => 'admin/baz/edit',
             )
             'routes' => array(
-                'list' => 'admin/baz/list',
-                'new' => 'admin/baz/new',
-                'edit' => 'admin/baz/edit',
-                'delete' => 'admin/baz/delete',
+                'list' => 'zfcadmin/baz/list',
+                'new' => 'zfcadmin/baz/new',
+                'edit' => 'zfcadmin/baz/edit',
+                'delete' => 'zfcadmin/baz/delete',
             ),
         ),
     ),
