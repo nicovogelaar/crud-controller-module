@@ -29,7 +29,7 @@ return array(
             'entity_class' => 'Example\Entity\Baz',
             'form_class' => 'Admin\Form\BazForm',
             'paginator_class' => 'Admin\Paginator\BazPaginator',
-            'template' => array(
+            'templates' => array(
                 'list' => 'admin/baz/list',
                 'new' => 'admin/baz/new',
                 'edit' => 'admin/baz/edit',

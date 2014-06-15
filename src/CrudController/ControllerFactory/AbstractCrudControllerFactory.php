@@ -6,8 +6,6 @@
  */
 namespace CrudController\ControllerFactory;
  
-use Zend\Form\Form;
-use Zend\Paginator\Paginator;
 use Zend\ServiceManager\AbstractFactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\ServiceManager\AbstractPluginManager;
