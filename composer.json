@@ -1,0 +1,24 @@
+{
+    "name": "nicovogelaar/crud-controller-module",
+    "description": "CRUD controller module",
+    "license": "MIT",
+    "keywords": [
+        "crud",
+        "crud controller module",
+        "zf2",
+        "zend framework 2",
+        "module"
+    ],
+    "homepage": "https://github.com/nicovogelaar/crud-controller-module",
+    "require": {
+        "zendframework/zendframework": ">=2.1.5"
+    },
+    "autoload": {
+        "psr-0": {
+            "CrudController": "src/"
+        }
+    },
+    "suggest": {
+        "nicovogelaar/paginator-module": "Paginator module for ZF2"
+    }
+}
