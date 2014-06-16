@@ -6,7 +6,7 @@ Introduction
 
 This CRUD controller module is intended to easily create controllers with CRUD functionality.
 
-This module also works very good with the [paginator module](https://github.com/nicovogelaar/paginator-module).
+The module works also very good with the [paginator module](https://github.com/nicovogelaar/paginator-module).
 
 Usage
 ------------
