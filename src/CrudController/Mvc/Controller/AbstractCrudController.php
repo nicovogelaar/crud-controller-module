@@ -282,6 +282,9 @@ abstract class AbstractCrudController extends AbstractActionController
 
         if ($id > 0) {
             $object = $this->repository->fetch($id);
+        } else {
+            $objectClass = $this->repository->getEntityClass();
+            $object = new $objectClass();
         }
 
         if (!isset($object) || !$object) {
