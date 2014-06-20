@@ -7,8 +7,10 @@
 namespace Nicovogelaar\CrudController;
 
 return array(
+    'factories' => array(
+        'Nicovogelaar\CrudController\Repository\CrudRepository' => 'Nicovogelaar\CrudController\Repository\CrudRepositoryFactory',
+    ),
     'invokables' => array(
-        'Nicovogelaar\CrudController\Repository\CrudRepository' => 'Nicovogelaar\CrudController\Repository\CrudRepository',
         'Nicovogelaar\CrudController\Listener\CrudControllerListener' => 'Nicovogelaar\CrudController\Listener\CrudControllerListener',
     ),
 );

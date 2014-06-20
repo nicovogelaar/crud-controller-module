@@ -9,7 +9,6 @@ namespace Nicovogelaar\CrudController\ControllerFactory;
 use Zend\ServiceManager\AbstractFactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\ServiceManager\AbstractPluginManager;
-use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 
 /**
  * @author Nico Vogelaar <nico@nicovogelaar.nl>
@@ -71,12 +70,6 @@ class AbstractCrudControllerFactory implements AbstractFactoryInterface
 
         $repository = $parentLocator->get('Nicovogelaar\CrudController\Repository\CrudRepository');
         $repository->setEntityClass($entityClass);
-
-        if ($repository instanceof ObjectManagerAwareInterface
-          && null === $repository->getObjectManager()
-        ) {
-          $repository->setObjectManager($parentLocator->get('Doctrine\ORM\EntityManager'));
-        }
 
         return new $controllerClass($repository, $templates, $routes, $form, $paginator);
     }
