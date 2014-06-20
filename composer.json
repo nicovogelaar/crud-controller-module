@@ -14,8 +14,8 @@
         "zendframework/zendframework": ">=2.1.5"
     },
     "autoload": {
-        "psr-0": {
-            "CrudController": "src/"
+        "psr-4": {
+            "Nicovogelaar\\CrudController\\": "src/"
         }
     },
     "suggest": {

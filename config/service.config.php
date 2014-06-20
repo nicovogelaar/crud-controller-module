@@ -4,11 +4,11 @@
  * @license   http://www.opensource.org/licenses/mit-license.php  MIT License
  * @link      http://nicovogelaar.nl
  */
-namespace CrudController;
+namespace Nicovogelaar\CrudController;
 
 return array(
     'invokables' => array(
-        'CrudController\Repository\CrudRepository' => 'CrudController\Repository\CrudRepository',
-        'CrudController\Listener\CrudControllerListener' => 'CrudController\Listener\CrudControllerListener',
+        'Nicovogelaar\CrudController\Repository\CrudRepository' => 'Nicovogelaar\CrudController\Repository\CrudRepository',
+        'Nicovogelaar\CrudController\Listener\CrudControllerListener' => 'Nicovogelaar\CrudController\Listener\CrudControllerListener',
     ),
 );

@@ -4,7 +4,7 @@
  * @license   http://www.opensource.org/licenses/mit-license.php  MIT License
  * @link      http://nicovogelaar.nl
  */
-namespace CrudController\Listener;
+namespace Nicovogelaar\CrudController\Listener;
 
 use Zend\EventManager\Event;
 use Zend\EventManager\EventManagerInterface;
@@ -31,14 +31,14 @@ class CrudControllerListener implements ListenerAggregateInterface
         $sharedEvents = $events->getSharedManager();
 
         $this->listeners[] = $sharedEvents->attach(
-            'CrudController\Mvc\Controller\AbstractCrudController',
+            'Nicovogelaar\CrudController\Mvc\Controller\AbstractCrudController',
             'save',
             array($this, 'save'),
             10
         );
 
         $this->listeners[] = $sharedEvents->attach(
-            'CrudController\Mvc\Controller\AbstractCrudController',
+            'Nicovogelaar\CrudController\Mvc\Controller\AbstractCrudController',
             'delete',
             array($this, 'delete'),
             10

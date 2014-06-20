@@ -4,7 +4,7 @@
  * @license   http://www.opensource.org/licenses/mit-license.php  MIT License
  * @link      http://nicovogelaar.nl
  */
-namespace CrudController\Repository;
+namespace Nicovogelaar\CrudController\Repository;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;

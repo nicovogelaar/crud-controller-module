@@ -4,14 +4,14 @@
  * @license   http://www.opensource.org/licenses/mit-license.php  MIT License
  * @link      http://nicovogelaar.nl
  */
-namespace CrudController\Mvc\Controller;
+namespace Nicovogelaar\CrudController\Mvc\Controller;
 
 use Zend\Form\Form;
 use Zend\Http\Response;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use CrudController\Exception;
-use CrudController\Repository\CrudRepositoryInterface;
+use Nicovogelaar\CrudController\Exception;
+use Nicovogelaar\CrudController\Repository\CrudRepositoryInterface;
 
 /**
  * @author Nico Vogelaar <nico@nicovogelaar.nl>

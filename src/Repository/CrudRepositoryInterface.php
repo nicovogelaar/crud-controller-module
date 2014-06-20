@@ -4,7 +4,7 @@
  * @license   http://www.opensource.org/licenses/mit-license.php  MIT License
  * @link      http://nicovogelaar.nl
  */
-namespace CrudController\Repository;
+namespace Nicovogelaar\CrudController\Repository;
 
 /**
  * @author Nico Vogelaar <nico@nicovogelaar.nl>

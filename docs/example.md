@@ -119,7 +119,7 @@ The Crud repository, form, paginator, routes and templates will be injected into
 <?php
 namespace Admin\Controller;
 
-use CrudController\Mvc\Controller\AbstractCrudController;
+use Nicovogelaar\CrudController\Mvc\Controller\AbstractCrudController;
 
 class FooController extends AbstractCrudController
 {

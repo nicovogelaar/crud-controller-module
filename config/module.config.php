@@ -7,7 +7,7 @@
 return array(
     'controllers' => array(
         'abstract_factories' => array(
-            'CrudController\ControllerFactory\AbstractCrudControllerFactory',
+            'Nicovogelaar\CrudController\ControllerFactory\AbstractCrudControllerFactory',
         ),
     ),
 );

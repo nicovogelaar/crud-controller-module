@@ -4,7 +4,7 @@
  * @license   http://www.opensource.org/licenses/mit-license.php  MIT License
  * @link      http://nicovogelaar.nl
  */
-namespace CrudController\ControllerFactory;
+namespace Nicovogelaar\CrudController\ControllerFactory;
  
 use Zend\ServiceManager\AbstractFactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
@@ -69,7 +69,7 @@ class AbstractCrudControllerFactory implements AbstractFactoryInterface
         $templates = $this->getTemplates($config);
         $routes = $this->getRoutes($config);
 
-        $repository = $parentLocator->get('CrudController\Repository\CrudRepository');
+        $repository = $parentLocator->get('Nicovogelaar\CrudController\Repository\CrudRepository');
         $repository->setEntityClass($entityClass);
 
         if ($repository instanceof ObjectManagerAwareInterface
