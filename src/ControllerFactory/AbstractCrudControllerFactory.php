@@ -64,7 +64,7 @@ class AbstractCrudControllerFactory implements AbstractFactoryInterface
         $form = isset($config['form_class']) ?
             $fm->get($config['form_class']) : null;
         $paginator = isset($config['paginator_class']) ?
-          $parentLocator->get($config['paginator_class']) : null;
+            $parentLocator->get($config['paginator_class']) : null;
         $templates = $this->getTemplates($config);
         $routes = $this->getRoutes($config);
 

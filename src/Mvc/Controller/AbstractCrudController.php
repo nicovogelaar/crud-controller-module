@@ -86,10 +86,6 @@ abstract class AbstractCrudController extends AbstractActionController
      */
     public function listAction()
     {
-        if ($this->paginator && method_exists($this->paginator, 'setData')) {
-            $this->paginator->setData($this->params()->fromQuery());
-        }
-
         $viewModel = new ViewModel();
         $viewModel->setTemplate($this->templates['list']);
         $viewModel->setVariables(
@@ -99,6 +95,15 @@ abstract class AbstractCrudController extends AbstractActionController
                 'routes' => $this->routes
             )
         );
+
+        $params = array(
+            'controller' => $this,
+            'paginator' => $this->paginator,
+            'viewModel' => $viewModel,
+            'repository' => $this->repository
+        );
+
+        $this->getEventManager()->trigger('list', $this, $params);
 
         return $viewModel;
     }
